@@ -29,7 +29,8 @@ btn.addEventListener('click', () => {
   //input text
   console.log(park[input]);
 
-  let embed = '<div class="powr-reviews"' + 'id=' + `"${park[input]}"` + '>' + '</div>'; //this one works
+  // let embed = '<div class="powr-reviews"' + 'id=' + `"${park[input]}"` + '>' + '</div>'; //this one works
+  let embed = `<div class="powr-reviews" id="${park[input]}"></div>`; //testing
 
   /*show a 'loading...' thing at the top when they click on the button so the slow pace of the reviews appearing doesn't make user think it's not working */
   //creating dynamic title based on users selection, but first have it say loading...
@@ -52,4 +53,6 @@ btn.addEventListener('click', () => {
   element.innerHTML = embed;
 });
 
-/*maybe move the input button box to the center of page on initial page load, then when user clicks the desired park and 'go' button the input box, etc div goes to top of the page, while the 'element' div loads into the rest of the page */
+/*maybe add the #title div and #element div to page after click event, so that #interface truly is centered.
+Somehow change background size to 'cover' or whole page, so doesn't go from pic, to white bottom, to filling page w green once review load....should stay green the whole time w no jankiness.
+Perhaps there should be an if(!embed) statement so #element div has something loaded if the POWr does not respond and doesn't load reviews */

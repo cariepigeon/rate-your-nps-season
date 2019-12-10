@@ -34,13 +34,17 @@ btn.addEventListener('click', () => {
 
   /*show a 'loading...' thing at the top when they click on the button so the slow pace of the reviews appearing doesn't make user think it's not working */
   //creating dynamic title based on users selection, but first have it say loading...
-  title.innerHTML = 'loading...';
+  // title.innerHTML = 'loading...';
+  //try textContent
+  title.textContent =`loading...`
   //after 2 seconds name of park takes place of 'loading...' text
   function nameDelay() {
     const myVar = setTimeout(realname, 2000);
   }
   function realname() {
-    title.innerHTML = `${parkname[input]}`;
+    // title.innerHTML = `${parkname[input]}`;
+    //try textContent
+    title.textContent =`${parkname[input]}`
   }
   //if the POWr info is available, run nameDelay to show parkname instead of 'loading...'
   if (embed) {

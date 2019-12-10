@@ -2,6 +2,9 @@
   margin: 0;
   font-family: 'Solway', serif;
 }
+body {
+  background-color: rgba(126, 213, 111);
+}
 #picture {
   background-image: repeating-linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(126, 213, 111, 0.8)), url(\tracy-higashi-FmXTolY2EwI-unsplash.jpg);
   background-size: cover;
@@ -11,9 +14,7 @@
   grid-template-columns: minmax(0, 1fr);
   height: 100vh;
 }
-#noimage {
-  background-color: rgba(126, 213, 111, 0.8);
-}
+
 ul {
   display: grid;
 

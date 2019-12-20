@@ -34,16 +34,18 @@
           Review Your NPS Season & Read Reviews for National Parks You're Interested In Working At
         </h1>
       </header>
-      <div id="selection">
-        <p id="question">What NPS Unit Would You like to Read Reviews/Add Review For:</p>
-        <select name="location" id="npsunit">
+      <form name="choose park" id="selection">
+        <label for="npsunit">
+          <p id="question">What NPS Unit Would You like to Read Reviews/Add Review For:</p>
+        </label>
+        <select id="npsunit" name="location">
           <option value="0">park1</option>
           <option value="1">park2</option>
         </select>
 
         <!--button to cause event listener-->
-        <button id="btn-read">READ / WRITE REVIEWS!</button>
-      </div>
+        <button type="button" id="btn-read">READ / WRITE REVIEWS!</button>
+      </form>
     </div>
 
 

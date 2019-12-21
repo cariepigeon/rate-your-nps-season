@@ -44,12 +44,14 @@ btn.addEventListener('click', () => {
   function realname() {
     // title.innerHTML = `${parkname[input]}`;
     //try textContent
-    title.textContent =`${parkname[input]}`
+    if (element.children[0].clientHeight > 0) 
+      {title.textContent =`${parkname[input]}`;
+    } else {
+      title.textContent = `there is a problem with the reviews engine, please try again`;
+    }
   }
   //if the POWr info is available, run nameDelay to show parkname instead of 'loading...'
-  if (embed) {
     nameDelay();
-  }
 
   // title.style.backgroundColor = 'red'; 
   title.style.padding = '.5rem 0';

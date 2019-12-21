@@ -17,57 +17,55 @@
 <!-- div that holds entire top part (nav, header, selection box, and button so that when user clicks the park they want to review the background image can switch from the whole body to just the div that holds the top div that holds everything except the reviews) -->
 
 <body>
-  <div id="picture">
-    <!--top nav with logo-->
-    <nav>
-      <ul>
-        <li class="nav" id="home"><a href="#">RateYourNPSseason</a></li>
-        <li class="nav" id="right">ABOUT</li>
-        <li class="nav" id="right2">CONTACT</li>
-      </ul>
-    </nav>
+  <!--top nav with logo-->
+  <nav>
+    <ul>
+      <li class="nav" id="home"><a href="#">RateYourNPSseason</a></li>
+      <li class="nav" id="right">ABOUT</li>
+      <li class="nav" id="right2">CONTACT</li>
+    </ul>
+  </nav>
 
-    <div id="interface">
-      <!-- header -->
-      <header>
-        <h1>
-          Review Your NPS Season & Read Reviews for National Parks You're Interested In Working At
-        </h1>
-      </header>
-      <form name="choose park" id="selection">
-        <label for="npsunit">
-          <p id="question">What NPS Unit Would You like to Read Reviews/Add Review For:</p>
-        </label>
-        <select id="npsunit" name="location">
-          <option value="0">park1</option>
-          <option value="1">park2</option>
-        </select>
+  <div id="interface">
+    <!-- header -->
+    <header>
+      <h1>
+        Review Your NPS Season & Read Reviews for National Parks You're Interested In Working At
+      </h1>
+    </header>
+    <form name="choose park" id="selection">
+      <label for="npsunit">
+        <p id="question">What NPS Unit Would You like to Read Reviews/Add Review For:</p>
+      </label>
+      <select id="npsunit" name="location">
+        <option value="0">park1</option>
+        <option value="1">park2</option>
+      </select>
 
-        <!--button to cause event listener-->
-        <button type="button" id="btn-read">READ / WRITE REVIEWS!</button>
-      </form>
-    </div>
-
-
-    <!--div that holds Title of Park your Reading/Writing Review for-->
-    <div id="title"></div>
-
-
-    <!--div that holds reviews. Dynamic according to user selection-->
-    <div id="element">
-      <!-- <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-reviews" id="ac6813e6_1574355481"></div>-->
-    </div>
-
-    <footer>
-
-    </footer>
-    <!--script for POWr-->
-    <script src="https://www.powr.io/powr.js?platform=html"></script>
-
-    <!--my JS-->
-    <!--<script src="rateyournpsseason.js"></script>-->
-    <script src="rateyournpsseason.js"></script>
+      <!--button to cause event listener-->
+      <button type="button" id="btn-read">READ / WRITE REVIEWS!</button>
+    </form>
   </div>
+
+
+  <!--div that holds Title of Park your Reading/Writing Review for-->
+  <div id="title"></div>
+
+
+  <!--div that holds reviews. Dynamic according to user selection-->
+  <div id="element">
+    <!-- <script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-reviews" id="ac6813e6_1574355481"></div>-->
+  </div>
+
+  <footer>
+
+  </footer>
+  <!--script for POWr-->
+  <script src="https://www.powr.io/powr.js?platform=html"></script>
+
+  <!--my JS-->
+  <!--<script src="rateyournpsseason.js"></script>-->
+  <script src="rateyournpsseason.js"></script>
 
 </body>
 

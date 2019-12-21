@@ -11,6 +11,9 @@ body {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  /* height: 100vh; */
 }
 /* #picture {
   background-image: repeating-linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(126, 213, 111, 0.8)), url(\tracy-higashi-FmXTolY2EwI-unsplash.jpg);
@@ -19,6 +22,11 @@ body {
   display: grid; */
   /* ensure container doesn't spill past the viewport using minmax */
 /*   grid-template-columns: minmax(0, 1fr);
+  height: 100vh;
+} */
+/* #picture {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
   height: 100vh;
 } */
 
@@ -36,12 +44,6 @@ li {
 a, a:visited {
   text-decoration: none;
   color: inherit;
-}
-#right {
-  margin-left: auto;
-}
-#right2 {
-  margin-left: auto;
 }
 #interface {
   align-self: center;

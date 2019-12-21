@@ -18,7 +18,7 @@ const body = document.getElementById('picture');
 btn.addEventListener('click', () => {
   
   //change id of body so that background image goes away and we get background color
-  body.id = 'noimage';
+  /* body.id = 'noimage'; */
 
   /*convert input into a number so we can use as an index to grab from 'park' array.  input option value numbers must match up with the 'park' array index numbers of corresponding POWr review elements*/
   const input = parseInt(document.getElementById('npsunit').value);

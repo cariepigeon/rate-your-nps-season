@@ -2,18 +2,24 @@
   margin: 0;
   font-family: 'Solway', serif;
 }
-body {
+/* body {
   background-color: rgba(126, 213, 111);
+} */
+body {
+  background-image: repeating-linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(126, 213, 111, 0.8)), url(\tracy-higashi-FmXTolY2EwI-unsplash.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
-#picture {
+/* #picture {
   background-image: repeating-linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(126, 213, 111, 0.8)), url(\tracy-higashi-FmXTolY2EwI-unsplash.jpg);
   background-size: cover;
   background-position: top;
-  display: grid;
+  display: grid; */
   /* ensure container doesn't spill past the viewport using minmax */
-  grid-template-columns: minmax(0, 1fr);
+/*   grid-template-columns: minmax(0, 1fr);
   height: 100vh;
-}
+} */
 
 ul {
   display: grid;

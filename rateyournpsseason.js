@@ -31,6 +31,8 @@ btn.addEventListener('click', () => {
 
   // let embed = '<div class="powr-reviews"' + 'id=' + `"${park[input]}"` + '>' + '</div>'; //this one works
   let embed = `<div class="powr-reviews" id="${park[input]}"></div>`; //testing
+  //creating dynamic reviews section based on users selection
+  element.innerHTML = embed;
 
   /*show a 'loading...' thing at the top when they click on the button so the slow pace of the reviews appearing doesn't make user think it's not working */
   //creating dynamic title based on users selection, but first have it say loading...
@@ -51,12 +53,10 @@ btn.addEventListener('click', () => {
     }
   }
   //if the POWr info is available, run nameDelay to show parkname instead of 'loading...'
-    nameDelay();
+  nameDelay();
 
   // title.style.backgroundColor = 'red'; 
   title.style.padding = '.5rem 0';
-  //creating dynamic reviews section based on users selection
-  element.innerHTML = embed;
 });
 
 /*maybe add the #title div and #element div to page after click event, so that #interface truly is centered.

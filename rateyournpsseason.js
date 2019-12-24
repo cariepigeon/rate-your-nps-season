@@ -33,13 +33,30 @@ btn.addEventListener('click', () => {
   let embed = `<div class="powr-reviews" id="${park[input]}"></div>`; //testing
   //creating dynamic reviews section based on users selection
   element.innerHTML = embed;
-
   /*show a 'loading...' thing at the top when they click on the button so the slow pace of the reviews appearing doesn't make user think it's not working */
   //creating dynamic title based on users selection, but first have it say loading...
   // title.innerHTML = 'loading...';
   //try textContent
   title.textContent =`loading...`
-  //after 2 seconds name of park takes place of 'loading...' text
+
+  /* check every millisecond second for element height change, if change, change title to park name */
+  function checkLoad() {
+    console.log('checking...');
+    if (element.children[0].clientHeight > 0) {
+      title.textContent =`${parkname[input]}`;
+    }
+  }
+  let checkingLoad = setInterval(checkLoad, 100);
+
+  //if after 5 seconds no height, print problem w reviews engine
+  function noLoad() {
+    if (element.children[0].clientHeight <= 0) {
+      title.textContent = `there is a problem with the reviews engine, please try again`;
+    }
+  }
+  setTimeout(() => { clearInterval(checkingLoad); noLoad(); }, 5000);
+
+  /* //after 2 seconds name of park takes place of 'loading...' text
   function nameDelay() {
     const myVar = setTimeout(realname, 2000);
   }
@@ -53,7 +70,7 @@ btn.addEventListener('click', () => {
     }
   }
   //if the POWr info is available, run nameDelay to show parkname instead of 'loading...'
-  nameDelay();
+  nameDelay(); */
 
   // title.style.backgroundColor = 'red'; 
   title.style.padding = '.5rem 0';

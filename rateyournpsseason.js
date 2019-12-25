@@ -16,13 +16,8 @@ const body = document.getElementById('picture');
 
 /*event listener to make console/element div do its thing*/
 btn.addEventListener('click', () => {
-  
-  //change id of body so that background image goes away and we get background color
-  /* body.id = 'noimage'; */
-
   /*convert input into a number so we can use as an index to grab from 'park' array.  input option value numbers must match up with the 'park' array index numbers of corresponding POWr review elements*/
   const input = parseInt(document.getElementById('npsunit').value);
-  // const titleHead = document.getElementById('npsunit');
   //input value number
   console.log(input);
 
@@ -56,23 +51,6 @@ btn.addEventListener('click', () => {
   }
   setTimeout(() => { clearInterval(checkingLoad); noLoad(); }, 5000);
 
-  /* //after 2 seconds name of park takes place of 'loading...' text
-  function nameDelay() {
-    const myVar = setTimeout(realname, 2000);
-  }
-  function realname() {
-    // title.innerHTML = `${parkname[input]}`;
-    //try textContent
-    if (element.children[0].clientHeight > 0) 
-      {title.textContent =`${parkname[input]}`;
-    } else {
-      title.textContent = `there is a problem with the reviews engine, please try again`;
-    }
-  }
-  //if the POWr info is available, run nameDelay to show parkname instead of 'loading...'
-  nameDelay(); */
-
-  // title.style.backgroundColor = 'red'; 
   title.style.padding = '.5rem 0';
 });
 

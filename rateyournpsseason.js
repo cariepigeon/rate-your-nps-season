@@ -16,7 +16,35 @@ const parks = [
   {
     name: 'Arcadia National Park',
     code: '50cfe230_1579293158'
-  }
+  },
+  {
+    name: 'Adams National Historical Park',
+    code: '3d5933d6_1579294968'
+  },
+  {
+    name:'African American Cival War Memorial',
+    code:'e10f729b_1579295063'
+  },
+  {
+    name: 'African Burial Ground National Monument',
+    code: 'cb501ffe_1579295141'
+  },
+  {
+    name: 'Agate Fossil Beds National Monument',
+    code: 'e328e097_1579295222'
+  },
+  {
+    name: 'Ala Kahakai National Historic Trail',
+    code: '59c67b4d_1579295281'
+  },
+  {
+    name: 'Alagnak Wild River',
+    code: 'd6d421a0_1579295352'
+  },
+  {
+    name: 'Alaska Public Lands',
+    code: '2e9e03f5_1579295416'
+  },
 ]
 
 const btn = document.getElementById('btn-read');

@@ -1,11 +1,23 @@
 
 //POWr embed on test
-/*<script src="https://www.powr.io/powr.js?platform=html"></script><div class="powr-reviews" id="ac6813e6_1574355481"></div>*/
+/*<div class="powr-comments" id="3f34732f_1577584230"></div><script src="https://www.powr.io/powr.js?platform=14"></script>*/
 
 
 //replace the array values with the POWr codes for each nps unit
-const park = ['ac6813e6_1574355481', 'f15deb3a_1574369280'];
-const parkname = ['park 1', 'park 2'];
+/* const park = ['c6bca771_1579292693', '50cfe230_1579293158'];
+const parkname = ['Abraham Lincoln Birthplace National Historical Park', 'Arcadia National Park']; */
+
+//try using object instead of 2 arrays above
+const parks = [
+  {
+    name: 'Abraham Lincoln Birthplace National Historical Park',
+    code: 'c6bca771_1579292693'
+  },
+  {
+    name: 'Arcadia National Park',
+    code: '50cfe230_1579293158'
+  }
+]
 
 const btn = document.getElementById('btn-read');
 
@@ -22,10 +34,10 @@ btn.addEventListener('click', () => {
   console.log(input);
 
   //input text
-  console.log(park[input]);
+  console.log(parks[input]);
 
   // let embed = '<div class="powr-reviews"' + 'id=' + `"${park[input]}"` + '>' + '</div>'; //this one works
-  let embed = `<div class="powr-reviews" id="${park[input]}"></div>`; //testing
+  let embed = `<div class="powr-comments" id="${parks[input].code}"></div>`; //testing
   //creating dynamic reviews section based on users selection
   element.innerHTML = embed;
   /*show a 'loading...' thing at the top when they click on the button so the slow pace of the reviews appearing doesn't make user think it's not working */
@@ -38,7 +50,7 @@ btn.addEventListener('click', () => {
   function checkLoad() {
     console.log('checking...');
     if (element.children[0].clientHeight > 0) {
-      title.textContent =`${parkname[input]}`;
+      title.textContent =`${parks[input].name}`;
     }
   }
   let checkingLoad = setInterval(checkLoad, 100);
